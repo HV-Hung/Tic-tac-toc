@@ -1,12 +1,6 @@
-export const markX =(index)=>{
+export const mark =(index,typeNode)=>{
     return{
-    type: "x",
+    type: typeNode,
     payload:  index
     }}
 
-export const markY =(index)=>{
-    return {
-        type: "y",
-        payload:  index
-    }
-}
