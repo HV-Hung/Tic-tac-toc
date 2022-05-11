@@ -13,8 +13,8 @@ export default function changeValue (state=initialState, action){
             var newState={map: newMap,typeNode: "x"}
             return (newState);
         case "reset":
-            var newState= {...initialState}
-            return (newState)
+            console.log("this work")
+            return ({map:[0,0,0,0,0,0, 0,0,0],typeNode:"x"})
         default:
             return state
 

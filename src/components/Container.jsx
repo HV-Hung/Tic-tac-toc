@@ -11,17 +11,25 @@ const Container=()=> {
   const mapGame = useSelector(state => (state.map));  
   useEffect(()=>{
     if(checkWin(mapGame)) setIsWin(true);
+    else setIsWin(false);
   },[mapGame]) ;
-  const reset =()=>{
+  const resetGame =()=>{
     dispatch({type: "reset", paylpoad: null})
   } 
   return (
-    isWin?<div onClick={reset}>Chơi lại</div>:
+    <>
+    
     <div className='container'>
+      <div className={isWin?'play-box win': 'play-box'} >
+        
         {mapGame.map((type, index) =>
             <Node type = {type} index = {index}></Node>
         )}
+      </div>
+      {isWin &&<button className='button-play-again' onClick={resetGame}>Chơi lại</button>}
     </div>
+    
+    </>
 
   )
 }

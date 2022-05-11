@@ -1,12 +1,18 @@
 .container{
-    background-color: #fff;
-    width: 300px;
-    height: 300px;
+
+    height: 400px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+.play-box{
+    
+    background-color: rgb(180, 180, 180);
+    width: 305px;
+    height: 305px;
     display: grid;
+    grid-gap: 3px;
     grid-template-columns: 100px 100px 100px;
     grid-template-rows: 100px 100px 100px ;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
@@ -14,3 +20,25 @@
     overflow: hidden;
 
 }
+.win{
+    pointer-events: none;
+}
+
+.button-play-again {
+  background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+  margin: 30px 80px ;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  font-size: 16px;
+  width: 140px;
+  height: 50px;
+  border: 0;
+  cursor: pointer;
+ 
+}
+
+.button-play-again:hover {
+  background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+

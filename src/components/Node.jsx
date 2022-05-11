@@ -1,19 +1,18 @@
-import React, { useState } from 'react';
+import React  from 'react';
 import './Node.css';// Tell webpack that Button.js uses these styles
 import { useDispatch, useSelector} from "react-redux";
 // eslint-disable-next-line import/no-anonymous-default-export
 const Node= ({type, index})=> {
   const dispatch = useDispatch();
-  const [isMarked, setIsMarked] = useState(false);
-  const typeNode = useSelector(state=>state.typeNode);
+  const gameState = useSelector(state=>state);
   const handleSet=()=>{
-    if(isMarked) return;
+    if(gameState.map[index] !=0) return;
     else{
       dispatch({
-      type: typeNode,
+      type: gameState.typeNode,
       payload: index
       });
-    setIsMarked(true);
+    
   }
     
 }

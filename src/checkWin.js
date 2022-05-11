@@ -29,6 +29,10 @@ const checkGame = (mapGame) =>{
     if(mapGame[2] !== 0 && mapGame[2] === mapGame[4] && mapGame[2]=== mapGame[6] ){
         return true;
     }
+    // kết quả hòa
+    if(!mapGame.includes(0)){
+        return true;
+    }
 
     else return false;
 }
